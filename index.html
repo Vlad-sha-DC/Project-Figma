@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Interior 1600</title>
 </head>
 <body>
-    <header class="header">
+            <header class="header">
         <div class="header-container">
+            <div class="header-left">
             <div class="header-search">
-                    <img class="search-ico" src="icons/Search.png" alt="Иконка поиска" aria-hidden="true">
+                    <img class="search-ico" src="icons/SearchIcon_main.svg" alt="Иконка поиска" aria-hidden="true">
                     <input type="text" placeholder="Search"/>
             </div>
 
-            <img src="pictures/House-logo.png" alt="логотип House Group">
+            <div class="header-logo">
+            <img src="icons/Logo_main.svg" alt="Иконка House Group">
+            <span>House Group</span>
+            </div>
+            </div>
 
+            <div class="header-right">
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="#">Blog</a></li>
@@ -26,13 +33,13 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <button type="button" class="burger-menu" aria-label="Open menu">
-                    <img src="icons/Hamburger.png" alt="" aria-hidden="true">
+                    <img src="icons/HamburgerIcon_main.svg" alt="" aria-hidden="true">
                 </button>
             </nav>
         </div>
-    </header>
-
-    <main>
+        </div>
+    </header> 
+    <main>       
     <section class="firstPage">
         <div class="firstPage_container">
             <h1 class="firstPage_title">We are the leaders <br> in <span>Interior Planning</span></h1>
@@ -42,9 +49,9 @@
             </p>
             
             <div class="firstPage_socials">
-                <a href="#" aria-label="Facebook">f</a>
-                <a href="#" aria-label="Twitter">t</a>
-                <a href="#" aria-label="Instagram">ig</a>
+                <a href="#" aria-label="Facebook"><img src="icons/FBicon_main.svg"/></a>
+                <a href="#" aria-label="Twitter"><img src="icons/TwitterIcon_main.svg"/></a>
+                <a href="#" aria-label="Instagram"><img src="icons/InstagramIcon_main.svg"/></a>
             </div>
 
             <a href="#work" class="btn btn-orange">Explore our work</a>
