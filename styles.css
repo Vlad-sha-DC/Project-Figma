@@ -104,11 +104,18 @@
     width: 24px;
     height: 24px;
 }
+@media (max-width: 320px) {
+    .header {max-width: 320px;} 
+    .header-search {display: none;}
+    .nav-list { display: none;}
+}
 /*----- секция--------*/
 .firstPage {
     background-image: url('pictures/BG_main.png');
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     max-width: 1600px;
     max-height: 800px;
@@ -202,15 +209,32 @@
 .firstPage_socials img:hover {
     color: var(--primary-orange);
 }
+@media (max-width: 320px) {
+ .firstPage {
+    gap: 40px;
+ }
+ .firstPage_container {
+    margin-top: 101px;
+    margin-left: 15px;
+    gap: 20px;
+
+ }
+ .firstPage_socials {
+    display: none;
+ }
+ .firstPage_buttons {
+    margin-left: 15px;
+ }   
+}
 /*----- секция--------*/
 
 .OurServices {
     width: 100%;
     max-width: 1600px;
-    max-height: 805px;
+    min-height: 805px;
     height: 100vh;
     background-color: #000000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url('pictures/Rectangle\ 359.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.80)), url('pictures/Rectangle\ 359.png');
     background-size: cover;
     background-position: center;
     color:  var(--primary-white);
@@ -277,7 +301,8 @@
     display: grid;
     grid-template-columns: 480px 500px;
     column-gap: 105px;
-    place-content: center;
+    align-items: center;
+    margin-left: 215px;
 }
 .Intro_text_bold {
     font-size: 24px;
@@ -298,7 +323,7 @@
     position: relative;
     width: 100%;
     max-width: 1600px;
-    max-height: 804px;
+    min-height: 804px;
     height: 100vh;
     background-image:url('pictures/image\ 5.png');
     background-size: cover;
@@ -344,7 +369,7 @@
     font-weight: 700;
     color: var(--primary-black);
 }
-.SingleFamily_btn {
+.Main_btn {
     width: 230px;
     height: 54px;
     padding: 16px 10px;
@@ -356,14 +381,12 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 100%;
-    font-style: bold;
     letter-spacing: 0%;
     display: flex;
     justify-content: center;
-    align-content: center;
     cursor: pointer;
 }
-.SingleFamily_btn:hover {
+.Main_btn:hover {
     background: #FF9C411A;
 }
 .SingleFamily_Separator {
@@ -371,13 +394,247 @@
    position: absolute;
    top: 0;
    bottom: 0;
-   left: 47%;
+   left: 755px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: center; 
 }
 .btn-next {
-background: none;
-cursor: pointer;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+/*----- секция--------*/
+.Team {
+    width: 100%;
+    max-width: 1600px;
+    padding: 130px 215px 150px 215px;
+}
+.Team_container {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.Team_title {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 40px;
+    color: var(--primary-black);
+}
+.Team_intro {
+    height: 75px;
+    display: flex;
+    gap: 100px;
+}
+.Team_intro_lead {
+    width: 540px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-black);    
+}
+.Team_intro_text {
+    width: 470px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--secondary-text);
+}
+.Team_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;    
+}
+.Team_card {
+    width: 360px;
+    height: 443px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+.Team_text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.Team_name {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-black);
+}
+.Team_position {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-black);
+}
+/*----- секция--------*/
+.Form {
+    width: 100%;
+    max-width: 1600px;
+    min-height: 535px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85)), url('pictures/Form_BG.png');
+    background-size: cover;
+    background-position: center;
+}
+.Form_container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 140px;
+    padding-left: 400px;
+    gap: 87px;
+}
+.Form_title {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 40px;
+    color: var(--primary-white);  
+}
+.Form_form {
+    display: flex;
+    align-items: flex-end;
+    gap: 70px;
+    width: 100%;
+}
+.Form_group input{
+    width: 500px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--primary-white);
+    padding-bottom: 8px;
+    color: var(--primary-white);
+    font-size: 18px;
+}
+.Form_group input::placeholder {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--primary-white);
+}
+.Form_btn {
+    width: 230px;
+    height: 56px;
+    padding: 16px 10px;
+    border-radius: 40px;
+    border: none;
+    gap: 10px;
+    color: var(--primary-orange);
+    background: var(--primary-white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;   
+}
+.Form_btn:hover {
+    background: #FF9C411A;   
+}
+/*----- секция--------*/
+.Projects {
+    width: 100%;
+    max-width: 1600px;
+    padding: 127.75px 0 150px 215px;
+}
+.Projects_title {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 40px;
+}
+.Projects_container {
+    margin-top: 73px;
+    display: flex;
+    gap: 0;
+}
+.Project_card {
+    width: 420px;
+    height: 745px;
+    position: relative;
+    display: block;
+
+}
+.Projects_card img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+.Project_card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.Project_card_name {
+    position: absolute;
+    bottom: 40px;
+    left: 49px;
+    color: var(--primary-white);
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+.Project_card:hover .Project_card_name {
+    opacity: 1;
+    transition: opacity 0.3s ease 0.2s;
+}
+.Project_card:hover::before {
+    opacity: 1;
+}
+/*----- секция--------*/
+.footer {
+    width: 100%;
+    max-width: 1600px;
+    min-height: 313px;
+    border-top: 1px solid black;    
+}
+.footer_content {
+    margin-top: 50px;
+    margin-left: 215px;
+    display: flex;
+
+}
+.footer_nav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 80px;
+}
+.footer_nav_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.footer_nav_list h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
+    color: var(--primary-black);
+}
+.footer_nav_list p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--primary-black);
+}
+.footer_social {
+   margin-left: 341px;
+}
+.footer_social_links {
+    display: flex;
+    gap: 25px;
+    cursor: pointer;
+}
+.footer_logo {
+    margin-top: 70px;    
+}
+.footer_copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    para
 }
